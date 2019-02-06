@@ -3,4 +3,4 @@ language: ruby
 rvm:
   - 2.4.1
 script:
-  - bundle exec rails db:migrate RAILS_ENV=test
+  - bundle exec rails db:migrate RAILS_ENV=development
