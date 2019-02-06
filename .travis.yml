@@ -1,0 +1,14 @@
+language: ruby
+cache:
+-bundler
+before:script:
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rake assets:precompile
+deploy:
+ provider: heroku
+ api_key:
+   secure: "Y6Z4tC3oBg2RGhhCTtgL+5SXS/oah3fuvCNa48lViBtLJUwE9SyhG8MIihyxzJ9HEUbynH0no/Gu+kwZYiYcpJIuTyEA4QF2g96KDjwp9rX+srwU/pzPXWf0DAygRbBTN+6+/r8i0PpPPZg1Gv+AyugzxxPtE7yYjensJvIIb+/R1QzTJOKwfclDSiwy5DpWtrH8jVlTpWnY/TNlxktbNoZ8BFW3MKNE58f6neYiqOx0xwmk2oXdPZ4ArFPnIhbHOKlj5UYS582ZYZ0JXRLLA7cA6EUy9iFteB8botl1BFedX/58SghuFtSlvaZ8C81mrA4yQGPYmhl1+swBWf1QKChtXr3JItIN4v6N7rm4I2HqNDiR33X4Vtwqld+D0EK9BktUNpA3zIdU13vK85g3DXzaFXGsCjqNFXcWh8JFbUYPf0QrwjUyybZMcfYFnw47B8V8d9Jn9xH2megqNW+cOkiaUPsIn9gZYT0SOlKWKZcmtUAiiOU2zSUL0RIP3QpTVUHCTAdyT5Z9HGmKlCF/l3/smcChRI9o5DzwVRI7sXKRoJPmcSE0JIVrBOj0tpRxYlcCteqmLhTKYOvOACyf6HDtOyBBdVe+Zbg3CBJjxxkOjC9DSbwom284lQilt38/Te7oeG5tv/NF+QjI8vDfvFAzGjZ2ysqptKEGNh4Ofh4=" 
+ app: rushabhsales
+ on: 
+   repo: shalinbhatt/rushabhsales
