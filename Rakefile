@@ -3,4 +3,6 @@
 
 require_relative 'config/application'
 
+task :default => [] #Workaround for rake default task
+
 Rails.application.load_tasks
